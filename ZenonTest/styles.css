@@ -204,6 +204,10 @@ nav ul li a:hover::after {
     gap: 15px;
 }
 
+.nav a.currentpage {
+    color: #219c82;
+}
+
 .mobile-menu-btn {
     display: none;
     background: none;

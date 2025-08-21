@@ -1,9 +1,9 @@
-// Mobile Menu Toggle
-const menuToggle = document.document.querySelector('.mobile-menu-btn');
+// Mobile menu functionality
+const mobileMenuToggle = document.document.querySelector('.mobile-menu-btn');
 const mainNav = document.document.querySelector('.nav ul');
 
-if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', function() {
+if (mobileMenuToggle && mainNav) {
+    mobileMenuToggle.addEventListener('click', function() {
         mainNav.classList.toggle('active');
         navMenu.classList.toggle('active');
             // Change icon based on menu state
@@ -16,6 +16,17 @@ if (menuToggle && mainNav) {
                 icon.classList.add('fa-bars');
             }
     });
+
+    // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
 }
 
 // Tab functionality for categories
