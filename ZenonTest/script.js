@@ -1,12 +1,20 @@
 // Mobile Menu Toggle
-const menuToggle = document.getElementById('menuToggle');
-const mainNav = document.getElementById('mainNav');
+const menuToggle = document.document.querySelector('.mobile-menu-btn');
+const mainNav = document.document.querySelector('.nav ul');
 
 if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', function() {
         mainNav.classList.toggle('active');
-        menuToggle.innerHTML = mainNav.classList.contains('active') ? 
-            '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        navMenu.classList.toggle('active');
+            // Change icon based on menu state
+            const icon = mobileMenuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
     });
 }
 
