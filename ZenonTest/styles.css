@@ -94,6 +94,11 @@ header {
     align-items: center;
 }
 
+.contact-info {
+    display: flex;
+    gap: 20px;
+}
+
 .contact-info a {
     color: var(--white);
     text-decoration: none;
@@ -197,10 +202,6 @@ nav ul li a:hover::after {
 .header-buttons {
     display: flex;
     gap: 15px;
-}
-
-.nav a.currentpage {
-    color: #219c82;
 }
 
 .mobile-menu-btn {
@@ -811,7 +812,6 @@ nav ul li a:hover::after {
 }
 
 .contact-info {
-    gap: 20px;
     display: flex;
     flex-direction: column;
     gap: 25px;
